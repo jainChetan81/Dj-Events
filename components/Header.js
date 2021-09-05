@@ -1,6 +1,6 @@
 import { defaultHead } from "next/head";
 import PropTypes from "prop-types";
-import styles from "../styles/Header.module.css";
+import styles from "@/styles/Header.module.css";
 import Link from "next/link";
 
 const Header = (props) => {
