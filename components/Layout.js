@@ -1,10 +1,13 @@
 import Head from "next/head";
 import PropTypes from "prop-types";
-import styles from "../styles/Layout.module.css";
+import styles from "@/styles/Layout.module.css";
 import Footer from "./Footer";
 import Header from "./Header";
+import ShowCase from "./Showcase";
+import { useRouter } from "node_modules/next/dist/client/router";
 
 function Layout({ title, keywords, description, children }) {
+	const router = useRouter();
 	return (
 		<div>
 			<Head>
@@ -14,6 +17,7 @@ function Layout({ title, keywords, description, children }) {
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 			</Head>
 			<Header />
+			{router.pathname == "/" && <ShowCase />}
 			<main className={styles.container}>{children}</main>
 			<Footer />
 		</div>
