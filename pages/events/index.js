@@ -1,4 +1,3 @@
-import React from "react";
 import Layout from "@/components/Layout";
 import { BASE_API } from "@/config/url";
 import EventItem from "@/components/EventItem";

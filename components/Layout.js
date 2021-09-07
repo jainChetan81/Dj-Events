@@ -4,7 +4,7 @@ import styles from "@/styles/Layout.module.css";
 import Footer from "./Footer";
 import Header from "./Header";
 import ShowCase from "./Showcase";
-import { useRouter } from "node_modules/next/dist/client/router";
+import { useRouter } from "next/router";
 
 function Layout({ title, keywords, description, children }) {
 	const router = useRouter();
