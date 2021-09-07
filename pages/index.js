@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Layout from "@/components/Layout";
-import { ALL_EVENTS_URL } from "@/config/url";
+import { BASE_API } from "@/config/url";
 import EventItem from "@/components/EventItem";
 
 export default function Home({ events }) {
@@ -23,10 +23,10 @@ export default function Home({ events }) {
 }
 
 export async function getStaticProps() {
-	const res = await fetch(ALL_EVENTS_URL);
+	const res = await fetch(`${BASE_API}/events?_sort=date:ASC&_limit=3`);
 	const events = await res.json();
 	return {
-		props: { events: events.slice(0, 3) },
+		props: { events },
 		revalidate: 1,
 	};
 }

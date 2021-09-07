@@ -7,7 +7,7 @@ const EventItem = ({ evt }) => {
 		<article className={styles.event}>
 			<div className={styles.img}>
 				<Image
-					src={evt.image ? evt.image : "/images/event-default.png"}
+					src={evt.image ? evt.image.formats.thumbnail.url : "/images/event-default.png"}
 					alt={evt.name}
 					width={170}
 					height={100}
@@ -16,7 +16,7 @@ const EventItem = ({ evt }) => {
 			</div>
 			<div className={styles.info}>
 				<time>
-					{evt.date} at {evt.time}
+					{new Date(evt.date).toLocaleDateString()} at {evt.time}
 				</time>
 				<h3>{evt.name}</h3>
 			</div>
