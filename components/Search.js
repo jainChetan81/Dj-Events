@@ -15,7 +15,6 @@ const Search = () => {
 			<form onSubmit={handleSubmit}>
 				<input
 					placeholder="Search for Events"
-					autComplete="on"
 					type="text"
 					value={term}
 					onChange={(e) => {
