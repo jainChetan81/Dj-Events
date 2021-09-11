@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Layout from "@/components/Layout";
-import { BASE_API } from "@/config/url";
+import { BASE_API } from "@/config/urlConstants";
 import EventItem from "@/components/EventItem";
 
 export default function Home({ events }) {

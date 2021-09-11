@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout";
-import { BASE_API } from "@/config/url";
+import { BASE_API } from "@/config/urlConstants";
 import EventItem from "@/components/EventItem";
 import qs from "qs";
 import { useRouter } from "next/router";

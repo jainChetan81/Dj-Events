@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import styles from "@/styles/Form.module.css";
 import { useState } from "react";
-import { BASE_API } from "@/config/url";
+import { BASE_API } from "@/config/urlConstants";
 
 const ImageUpload = ({ evtId, imageUploaded }) => {
 	const [image, setImage] = useState(null);

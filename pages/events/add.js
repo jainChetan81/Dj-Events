@@ -4,7 +4,7 @@ import styles from "@/styles/Form.module.css";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
-import { BASE_API } from "@/config/url";
+import { BASE_API } from "@/config/urlConstants";
 
 const EventsAddPage = () => {
 	const [values, setValues] = useState({

@@ -6,7 +6,7 @@ import { FaImage } from "react-icons/fa";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
-import { BASE_API } from "@/config/url";
+import { BASE_API } from "@/config/urlConstants";
 import moment from "node_modules/moment/moment";
 import Modal from "@/components/Modal";
 import ImageUpload from "@/components/ImageUpload";

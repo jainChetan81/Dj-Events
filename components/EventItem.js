@@ -21,8 +21,8 @@ const EventItem = ({ evt }) => {
 				<h3>{evt.name}</h3>
 			</div>
 			<div className={styles.link}>
-				<Link href={`/events/${evt.slug}`} as={`/events/${evt.slug}`} className="btn">
-					Details
+				<Link href={`/events/${evt.slug}`} as={`/events/${evt.slug}`}>
+					<a className="btn">Details</a>
 				</Link>
 			</div>
 		</article>

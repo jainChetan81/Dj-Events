@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout";
-import { BASE_API } from "@/config/url";
+import { BASE_API } from "@/config/urlConstants";
 import { FaPencilAlt, FaTimes } from "react-icons/fa";
 import React from "react";
 import PropTypes from "prop-types";
@@ -51,7 +51,7 @@ const EventPage = ({ evt }) => {
 						<Image
 							src={
 								evt.image
-									? evt.image.formats.large.url
+									? evt.image.formats.thumbnail.url
 									: "/images/event-default.png"
 							}
 							width={960}
