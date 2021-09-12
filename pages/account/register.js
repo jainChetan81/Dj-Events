@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from "@/styles/Auth.module.css";
 import Layout from "@/components/Layout";
 import { ToastContainer, toast } from "react-toastify";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import AuthContext from "@/context/AuthContext";
 const RegisterPage = () => {
 	const [username, setUsername] = useState("");
@@ -11,6 +11,10 @@ const RegisterPage = () => {
 	const [password, setPassword] = useState("");
 	const [confirm_password, setConfirmPassword] = useState("");
 	const { registerUser, error } = useContext(AuthContext);
+
+	useEffect(() => {
+		error && toast.error(error);
+	});
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		if (valid()) {
