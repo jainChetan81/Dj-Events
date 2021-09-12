@@ -25,10 +25,6 @@ const EventsAddPage = () => {
 			toast.error("Please fill all fields");
 			return;
 		}
-		values.slug = values.name
-			.toLowerCase()
-			.replace(/ /g, "-")
-			.replace(/[^\w-]+/g, "");
 		const res = await fetch(`${BASE_API}/events`, {
 			method: "POST",
 			headers: {
