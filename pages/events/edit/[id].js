@@ -153,7 +153,7 @@ const EditEventPage = ({ evt }) => {
 					Set Image
 				</button>
 			</div>
-			<Modal show={showModal} onClose={() => setShowModal(false)}>
+			<Modal show={	} onClose={() => setShowModal(false)}>
 				<ImageUpload evtId={evt.id} imageUploaded={imageUploaded} />
 			</Modal>
 		</Layout>
